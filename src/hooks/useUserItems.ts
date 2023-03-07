@@ -36,7 +36,7 @@ export default function useUserItems(): UseUserItemsT {
             setUserItems((result?.items as UserItemModelT[]) ?? []);
 
             if (result?.items?.length) toast.success(`Successfully ${result?.items?.length} NFTs found!`);
-            else toast.info("User has no NFTs!");
+            else toast.info("Could not find any NFT!");
 
             return (result.items as UserItemModelT[]) ?? [];
         } catch (error) {
