@@ -1,10 +1,11 @@
 type Props = {
+    value: string;
     onChange: (value: string) => unknown;
 };
 
 function SearchInputField(props: Props) {
     return (
-        <div className="relative flex cursor-pointer py-2.5 px-4 group text-white font-medium rounded-lg bg-[#1F1F3E] overflow-hidden max-w-[400px]">
+        <div className="relative h-10 lg:h-auto flex cursor-pointer py-2.5 px-4 group text-white font-medium rounded-lg bg-[#1F1F3E] overflow-hidden max-w-[400px]">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="124"
@@ -65,11 +66,12 @@ function SearchInputField(props: Props) {
                     </filter>
                 </defs>
             </svg>
-            <span className="relative z-10 mr-auto text-2xl w-full">
+            <span className="relative z-10 mr-auto text-base lg:text-2xl w-full">
                 <input
                     onChange={(e) => props.onChange(e.target.value)}
+                    value={props.value}
                     placeholder="Enter a user address.."
-                    className="bg-transparent w-full focus:ring-0 focus:outline-none"
+                    className="bg-transparent w-full focus:ring-0 focus:outline-none h-6 lg:h-auto"
                 />
             </span>
         </div>
