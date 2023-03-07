@@ -1,5 +1,7 @@
+import NFTsPage from "./pages/NFTsPage";
+
 function App() {
-    return <div className="App"></div>;
+    return <NFTsPage />;
 }
 
 export default App;
