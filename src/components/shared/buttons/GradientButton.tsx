@@ -11,7 +11,7 @@ function GradientButton(props: PropsT) {
         <div
             onClick={props.onClick}
             className={classNames(
-                "relative flex cursor-pointer py-2.5 px-4 group text-white font-medium rounded-full bg-[#1F1F3E] overflow-hidden max-w-[200px]",
+                "relative flex cursor-pointer py-2.5 px-4 group text-white font-medium rounded-full bg-[#1F1F3E] md:overflow-hidden max-w-[200px]",
                 props.className
             )}
         >
@@ -75,7 +75,7 @@ function GradientButton(props: PropsT) {
                     </filter>
                 </defs>
             </svg>
-            <span className="relative z-10 mx-auto text-2xl">{props.name}</span>
+            <span className="relative z-10 mx-auto text-base md:text-2xl">{props.name}</span>
         </div>
     );
 }
